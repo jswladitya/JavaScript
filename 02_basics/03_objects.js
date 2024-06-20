@@ -17,15 +17,25 @@ const JsUser = {
 }
 
 //To Excess objects
-console.log(JsUser.email);// do not use this method means dot wala method to excess objects in js 
+// console.log(JsUser.email);// dot method jyada tar use hota he but kabhi kabhi : ke left me "aabc" likha hota he use dot laga ke access nahi kia ja sakta islie we use [""] wala method
 
-console.log(JsUser["email"]); //means box me string
-console.log(JsUser[mySym]);
+// console.log(JsUser["email"]); //means box me string
+// console.log(JsUser[mySym]);
 
 //object me change kaise karte he,. & = use karo
 JsUser.email = "adityathespiderman@gmail.com"
-console.log(JsUser);
+// console.log(JsUser);
 
-JsUser.freeze(JsUser) //JsUser object ko freeze kardia taki koi object me kuch change nahi kar paye
+// JsUser.freeze(JsUser) //JsUser object ko freeze kardia taki koi object me kuch change nahi kar paye
 
-//learn later --> about function
+
+
+//Function 
+JsUser.greeting = function(){
+    console.log("Hello Js User");
+}
+JsUser.greetingTwo = function(){
+    console.log(`Hello Js User, ${this.name}`);
+}
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());
