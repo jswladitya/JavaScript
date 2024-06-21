@@ -86,7 +86,7 @@ function returnSecondValue(getArray){
      return getArray[1]
 }
 
-// console.log(returnSecondValue([200,300,400,500])) 
-console.log(returnSecondValue(myNewArray))
+// console.log(returnSecondValue([200,300,400,500])) //method 2
+console.log(returnSecondValue(myNewArray)) //method 1
 
 
