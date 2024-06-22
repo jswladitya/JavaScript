@@ -1,4 +1,4 @@
-//Revise again
+
 //'this'keyword understanding
 const user = {
     username: "Aditya",
@@ -6,7 +6,6 @@ const user = {
 
     welcomeMessage: function () {
         console.log(`${this.username} , welcome to website`);
-        //hame this ko current context means curly braces ke ander walo ke lie eg...username , price unke lie hi use karna hota he
         //means is scope me jitne bhi variables he unhe excess karne ke lie this lagate he
 
         //NOTE: sirf this print karaye toh wo apne object ka pura current context print karega
@@ -25,7 +24,7 @@ const user = {
 
 
 
-//if ham globally node environment ke andere this print karaye toh wo empty object print karega
+//if ham globally node environment ke ander this print karaye toh wo empty object print karega
 console.log(this); //{}
 
 //but
