@@ -4,7 +4,7 @@ const myTotal = myNums.reduce( (accumulator, currentValue) => {
     console.log(`accumulator : ${accumulator} and currentValue : ${currentValue}`);
 
     //since hamne variable me store kia he & scope me likha he toh return statement daalna padega
-    return accumulator+ currentValue
+    return accumulator + currentValue
 },0) // <-- yaha ham jo value dalte he wo accumulator ki initial value hoti he
 
 console.log(myTotal);
