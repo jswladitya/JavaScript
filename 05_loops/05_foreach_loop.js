@@ -14,7 +14,7 @@ const coding = ["js", "ruby", "python", "java", "cpp"]
 
 
 
-//another method --> function declare karane ke  baad use pass on karana
+//another method --> function declare karane ke  baad use pass on karana for each me
 // function printMe(val){
 //     console.log(val);
 // }
@@ -22,10 +22,10 @@ const coding = ["js", "ruby", "python", "java", "cpp"]
 
 
 
-// coding.forEach((item,index,arr)=>{
-//     //sirf items hi nahi ye loop ke pass index aur array bhi access hota he
-// console.log(item,index,arr);
-// })
+coding.forEach((item,index,arr)=>{
+    //not just items , we can even access index & whole array using for each
+console.log(item,index,arr);
+})
 
 
 //array ke ander multiple objects ko kaise access karte he
