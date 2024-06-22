@@ -1,21 +1,23 @@
-//what if we store foreach loop in a variable
+//if we store foreach loop in a variable
+//then return statement is mandatory
+
 // const coding = ["js", "ruby", "python", "java", "cpp"]
 
 // const values = coding.forEach((item)=>{
 // console.log(item); //js,ruby,python,java,cpp
-// //then return statement is mandatory
 // return item;
 // })
 // console.log(values); //undefined,  chahe return statement use karo ya na karo sabhi case me undefined hi print karta he
 
 
 //lets use new example
-//using filter ---> returns only true or false statements
+//using filter ---> checks true or false statements
 //map --> performs operations
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-//jaise hamare pass foreach tha waise hamare pass filter opertion bhi hota he & ye bhi call back function hi leta he & yaha deni padti condition
+//jaise hamare pass foreach tha waise hamare pass filter opertion bhi hota he & ye bhi call back function hi leta he & yaha deni padti condition & ye return karta he in form of true or false
 const newNums = myNums.filter((num) => num > 4)//1st method
+//prints only that numbers, which are greater than 4
 const newNums2 = myNums.filter((num) => { return num > 4 }) //2nd method , means if curly bracket use kar rahe means ager scope je likh rahe ho to always use return statement 
 
 // console.log(newNums);
@@ -59,5 +61,7 @@ const books = [
 ]
 
 let userBooks = books.filter((bk)=>bk.genre === 'history') //yaha hamne har ek book ko bk maan lia
+
+//since userBooks already declared ho chuka he toh use wapas declare nhi karsakte bas rewrite kar sakte he
 userBooks = books.filter((bk)=>bk.publish >= 2000 && bk.genre==='science')
 console.log(userBooks);
