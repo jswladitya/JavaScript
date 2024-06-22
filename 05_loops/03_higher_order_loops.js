@@ -19,17 +19,19 @@ map.set('IN', "india")
 map.set('USA', "united states of america")
 map.set('Fr', " france")
 // map.set('IN', "india") //ye phirse nahi print karega because map unique values ko print karta he
+// console.log(map);
 
+//Lets Apply For of loop on map
+// for (const key of map) //key & value of alag alag array print hoga
 
-console.log(map);
-// for (const key of map) 
+//we need to destructure it so that it prints keys & values different
 for (const [key , value] of map) {
     
-    console.log(key, ':-', value);
+    // console.log(key, ':-', value);
 }
 
 
-//NOTE:- objects are not iteratable , means for of loop ke lie objects kaam nahi kar raha , so we ise for in loop
+//NOTE:- objects are not iteratable for FOR OF Loop, so we Use FOOR IN Loop
 //example
 
 // const myObject = {
