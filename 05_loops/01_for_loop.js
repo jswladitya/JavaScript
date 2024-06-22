@@ -8,11 +8,12 @@ for(let i =0; i<=10; i++){
 
 
 
-//nested loops
-for (let i = 0; i <=10; i++) {
-    // console.log(`Outer loop value : ${i}`);
-    for(let j = 0; j<=10;j++){
+//nested loops ---> printing tables
+for (let i = 1; i <=10; i++) {
+    // console.log(`Table of: ${i}`);
+    for(let j = 1; j<=10;j++){
         // console.log(`inner loop value : ${j} & Outer loop ${i}`);
+        // console.log(i + `*` + j + `=` + i*j );
     }
     
 }
