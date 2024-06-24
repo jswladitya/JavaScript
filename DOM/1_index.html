@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children); //we get an html collection which is similar to array
+    // console.log(parent.children[1]); //we will get tuesday coz we are accessing 2nd child 
+    // console.log(parent.children[1].innerHTML); //will finally print tuesday 
+
+
+    //now lets access all children using for loop
+    //since parent hame nahi deta html collection parent.children deta he
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML)
+    // }
+
+    //changing the styling 
+    parent.children[1].style.color = "orange"
+
+    //accessing the children using properties
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    //child to parent 
+    // document.querySelector('.day') //will get 1st day 
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne); //will get 1st day
+    // console.log(dayOne.parentElement); //we'll directly get parent element using this 
+    
+    // console.log(dayOne.nextElementSibling); //we'll get monday ka bhai tuesday
+
+    //understanding child Nodes
+    // console.log("NODES :" , parent.childNodes);
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: white"></body>
+  <script>
+    const div = document.createElement("div");
+    console.log(div);
+
+    //adding more features to the div
+    div.className = "main";
+    div.id = Math.round(Math.random() * 10 + 1); //it will generate random id each time it get refreshed
+    div.setAttribute("title", "generated title");
+    div.style.backgroundColor = "green";
+    div.style.padding = "10px";
+    //    div.innerText="Aditya the Great" //method 1
+
+    // method 2 : adding text by creating a textnode
+    const addText = document.createTextNode("Aditya The Great");
+
+    //now we'll add the textnode to div
+    div.appendChild(addText);
+
+    //now lets attach our document to web
+    document.body.appendChild(div); //now div is visible to webpage
+  </script>
+</html>
