@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Part 3</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      //its not enough , we need to select parent & attach child it to get it visible
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("Python");
+    addLanguage("Java");
+    addLanguage("Flutter");
+
+    //lets add the languages in an optimized way
+    function addoptiLanguage(langName) {
+      const li = document.createElement("li");
+      const addText = document.createTextNode(langName);
+      li.appendChild(addText);
+
+      //OR
+      //    li.appendChild(document.createTextNode(langName))
+      document.querySelector(".language").appendChild(li);
+      
+    }
+    addLanguage("Go-Lang")
+
+    //HOW TO EDIT : Example 1
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    const newli= document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli) //python gets replaced with mojo
+
+    //HOW TO EDIT : Example 2
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+    
+    
+    //HOW TO REMOVE 
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+
+  </script>
+</html>
