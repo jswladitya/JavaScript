@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<style>
+    body{
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(yellow,
+        purple);
+        background-repeat: no-repeat;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <form>
+            <p><label>Height in cm :</label> <input type="text"> </p>
+            <p><label>Weight in kg :</label> <input type="text"> </p>
+            <button>Calculate</button>
+            <div class="results"></div>
+            <div class="weight-guide">
+                <p>Under Weight = Less Than 18.6</p>
+                <p>Normal Range = 18.6 to 24.9</p>
+                <p>Over Weight = Greater Than 24.9</p>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    const form = document.querySelector('form')
+
+    form.addEventListener('submit' , function(e){
+        e.preventDefault 
+
+    // document.querySelector('#height').value //here we'll input in string , we need to apply parseInt to convert input we get into a number
+    const height = parseInt(document.querySelector('#height').value)
+    const weight = parseInt(document.querySelector('#weight').value)
+
+    const results = document.querySelector('.results')
+
+    if(height === '' || height<0 || isNaN(height)){
+    results.innerHTML='Please Give A Valid height '
+    }
+    else if(weight === '' || weight<0 || isNaN(weight)){
+    results.innerHTML='Please give a valid weight '
+    }
+
+    else{
+        const bmi = (weight / ((height*height)/10000)).toFixed(2)
+        // toFixed(2) means , we want values up till 2 decimal values 
+
+        //show the result
+        results.innerHTML = '<span>${bmi}</span>';
+    }
+
+
+    })
+</script>
+</html>
