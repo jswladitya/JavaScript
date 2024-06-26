@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <h2>Amazing Image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/4385547/pexels-photo-4385547.jpeg"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/113850/pexels-photo-113850.jpeg?cs=srgb&dl=pexels-markusspiske-113850.jpg&fm=jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/1670977/pexels-photo-1670977.jpeg?cs=srgb&dl=pexels-francesco-ungaro-1670977.jpg&fm=jpg"
+            alt=""
+          />
+        </li>
+        <li>
+          <a id="google" style="color: aliceblue" href="https://google.com"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // Learn Events
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElemrnt, currentTarget
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keycode
+
+    // we should not write events directly into the html instead we should do 2nd approach
+    // document.getElementById('owl').onclick = function(){
+    //     alert("Owl Clicked")
+    // }
+
+    //3rd approach
+    // document.getElementById('owl').addEventListener('click' , function(){
+    //     alert("Owl Clicked again")
+    // } ,false)
+    //here 3rd parameter is false bydefault
+
+    // document.getElementById('images').addEventListener('click' , function(e){
+    //     console.log("Clicked Inside The ul");
+    // } ,false)
+
+    // document.getElementById('owl').addEventListener('click' , function(e){
+    //     console.log("Owl Clicked");
+
+    //     //by doing this ab event bubbling nahi hogi
+    //     e.stopPropagation()
+
+    // } ,false)
+
+    //NOTE:
+    //1. here if we clicked on owl, first 'owl clicked' will pop up then 'clicked inside the ul'
+    //2. here, false likhne se jo event propagation ho rha he wo bubbling he , means inside se outside
+    //3. if we write true instead of false then , outside se inside prints honge & us event propagation ko capturing kehte he
+    //4. function ke ander e daalne means jo event aya use pakda he
+
+    //lets try another example
+    //   document.getElementById('google').addEventListener('click' , function(e){
+    //      e.preventDefault(); //google.com pe mat jao
+    //      e.stopPropagation() //bubbling mat karo
+    //      console.log("Google Clicked"); //dont go to google just print this
+    //   }, false)
+
+    //Interesting Example
+    document.querySelector("#images").addEventListener(
+      'click',
+      function (e) {
+        // console.log(e);
+
+        // console.log(e.target); //shows ki kis target se image occur ho rahe he , jaise if photoshop id se img aa raha h to target photoshop hoga
+
+        // console.log(e.target.parentNode); //target ke parent ko show karana chahte he
+
+        console.log(e.targt.tagName);
+        if (e.target.tagName === 'IMG') {
+          console.log(e.target.id);
+          let removeIt = e.target.parentNode;
+          removeIt.remove(); //1st approach
+
+          // removeIt.parentNode.removeChild(removeIt) //2nd approach , but confusing
+        }
+
+        //checks(if-else) lagane padenge kyuki image pe click kia tab toh thik tha but if we clicked on li (google) toh kyuki li ka parent ul he toh pure ul ko jayab kar dega
+      },
+      false
+    );
+  </script>
+</html>
