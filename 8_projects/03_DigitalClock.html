@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+     body{
+        background-color: #212121;
+        color: #fff;
+     }
+     .centre{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+     }
+
+     #clock{
+        font-size: 48px;
+        background-color: orange;
+        padding: 20px 50px;
+        margin-top: 10px;
+        border-radius: 10px;
+     }
+    </style>
+</head>
+<body>
+    <div class="centre">
+        <div id="banner"><span>Your Local Time</span></div>
+        <div id="clock"></div>
+    </div>
+</body>
+<script>
+        // const clock=document.getElementById(clock)
+        const clock=document.querySelector('#clock')
+
+        //lets define a date & print it in a readable format
+        // let date = new Date();
+        // console.log(date.toLocaleTimeString());
+
+
+        //setInterval : this method controls events of javascript , it basically takes the method and an time period or interval , 1000 milisec me hota he
+
+        setInterval(function(){
+            let date = new Date();
+            // console.log(date.toLocaleTimeString());
+
+            clock.innerHTML = date.toLocaleTimeString();
+        }, 1000)
+        //har 1 sec me update hota rahega
+</script>
+</html>
