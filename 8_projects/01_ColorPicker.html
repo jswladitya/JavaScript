@@ -93,9 +93,10 @@
     
     //now we have buttons & body
     buttons.forEach(function(button){
+        // now we put on eventlistner on every button
         button.addEventListener('click' , function(e){
             console.log(e);
-            console.log(e.target);
+            console.log(e.target); //meeans kis target se ye event aya h wo print karo
 
             if(e.target.id === 'red'){
              body.style.backgroundColor = 'red'
