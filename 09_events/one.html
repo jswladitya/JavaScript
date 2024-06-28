@@ -82,7 +82,7 @@
     //NOTE:
     //1. here if we clicked on owl, first 'owl clicked' will pop up then 'clicked inside the ul'
     //2. here, false likhne se jo event propagation ho rha he wo bubbling he , means inside se outside
-    //3. if we write true instead of false then , outside se inside prints honge & us event propagation ko capturing kehte he
+    //3. if we write true instead of false then , outside se inside prints honge & us event propagation ko capturing kehte he , this is rearly used
     //4. function ke ander e daalne means jo event aya use pakda he
 
     //lets try another example
@@ -92,17 +92,17 @@
     //      console.log("Google Clicked"); //dont go to google just print this
     //   }, false)
 
-    //Interesting Example
-    document.querySelector("#images").addEventListener(
+    //Interesting Project
+    document.querySelector('#images').addEventListener(
       'click',
       function (e) {
-        // console.log(e);
+        // console.log(e);  //events agega har bar
 
         // console.log(e.target); //shows ki kis target se image occur ho rahe he , jaise if photoshop id se img aa raha h to target photoshop hoga
 
         // console.log(e.target.parentNode); //target ke parent ko show karana chahte he
 
-        console.log(e.targt.tagName);
+        console.log(e.target.tagName);
         if (e.target.tagName === 'IMG') {
           console.log(e.target.id);
           let removeIt = e.target.parentNode;
