@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+  </body>
+  <script>
+    //setInterval
+    const sayDate = function(str){
+        console.log(str , Date.now());
+    }
+
+    // setInterval(sayDate, 1000, "hi") //har ek sec me hi print hota rahega
+
+    const intervalId = setInterval(sayDate, 1000, "hi") 
+    clearInterval(intervalId) //immediate stop hota he ager aise likha he toh, islie event me likha jata he 
+  </script>
+</html>
