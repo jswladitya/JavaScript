@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Aditya the Great</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // Functions
+    // setTimeout(function(){
+    //     console.log("Aditya"); //means 2 sec baad Aditya print hoga
+    // }, 2000)
+
+    //method 2
+    // const sayAditya = function(){
+    //     console.log("Aditya");
+    // }
+    // setTimeout(sayAditya, 2000) //its a handler so sirf reference dena hota he call nhi karna hota
+
+    //interesting
+    const changeText = function () {
+      document.querySelector('h1').innerHTML = "Best Js Series";
+    };
+    // setTimeout(changeText, 2000); //same kaam
+    const changeMe = setTimeout(changeText, 2000); //same kaam
+
+    //we can even stop the execution before its time
+    // clearTimeout(changeMe) //hame ise event me lagana chahiye
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    } )
+
+  </script>
+</html>
