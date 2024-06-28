@@ -1,0 +1,1 @@
+1. by default js is synchronous (one by one code execution) and single threaded language
