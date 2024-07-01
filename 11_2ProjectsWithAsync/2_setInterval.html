@@ -13,12 +13,31 @@
   </body>
   <script>
     //setInterval
+    
+    //example 1
+    //har 1 sec ke gap me aditya print karte rahega
+    // setInterval(function(){
+    //   console.log("Aditya");
+    // } , 1000)
+
+    //example 2
+    // const sayDate = function(){
+    //   console.log("Aditya" , Date.now());
+    // }
+    // setInterval(sayDate, 1000)
+
+
+
     const sayDate = function(str){
         console.log(str , Date.now());
+        // yaha str aur date dono print karwa rahe he
     }
 
-    // setInterval(sayDate, 1000, "hi") //har ek sec me hi print hota rahega
+    // setInterval(sayDate, 1000, "hi") // 3rd parameter bhi dal sakte he & yaha har ek sec me hi print hota rahega
 
+
+  
+    //To stop the execution 
     const intervalId = setInterval(sayDate, 1000, "hi") 
     clearInterval(intervalId) //immediate stop hota he ager aise likha he toh, islie event me likha jata he 
   </script>
