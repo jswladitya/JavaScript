@@ -12,4 +12,4 @@ because it reads file sync
 
 6. we know that jab bhi code execute hota he toh call stack ke ander pehle global execution banta he aur phir ek ek karke functions execute hote aur delete hote he ie.., load & unload hota he
 
-7. and memory heap me bas memeory allocate hota he ie.., variable rakhe jate he yaha pe 
+7. and memory heap me bas memory allocate hota he ie.., variable rakhe jate he yaha pe 
