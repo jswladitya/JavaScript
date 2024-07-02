@@ -12,18 +12,22 @@
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
+    xhr.open('GET', requestUrl) //abhi request gayi nahi he open ko call karna padta he ie xhr.send()
 
     //jo request bhejna he uper uske status ko track karega niche wala function
+
+    //onreadystatechange ek function leta he ki jab state change ho to kya karna he
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
 
         if(xhr.readyState === 4){
+        // console.log(this.responseText);
+
             const data = JSON.parse(this.responseText)
-            //string ko object me convert karna hoga
+            //data ata he string me so, we need to change string to object
         console.log(data.followers);
         }
     }
-    xhr.send()
+    xhr.send();
 </script>
 </html>
