@@ -1,2 +1,3 @@
 # JavaScript
-Here I'm learning JavaScript from very basics to Advanced Level 
+Here I'm learning JavaScript from very basic to Advanced Level 
+including some projects
