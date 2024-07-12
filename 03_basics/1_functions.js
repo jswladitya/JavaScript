@@ -34,6 +34,7 @@ function addTwoNumbers(num1,num2){
     return num1+num2
     // console.log("Aditya");//not be printed
     //return statement ke baad koi kaam nahi hoga 
+    //ager return statement nahi likhna toh curly bracet mat lagao, direct likhdo  
 }
 const result = addTwoNumbers(3,5)
 //Note: jab bhi kuch return karte he toh use call karte time ham use function ke bahar new variable me store karte he & phir console.log karke print karate he

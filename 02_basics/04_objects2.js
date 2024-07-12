@@ -59,7 +59,7 @@ console.log(tinderUser);
 
 // console.log(Object.keys(tinderUser)); 
 //means object ki saari sirf keys(left side wale) dedo jo ki object tinderuser he
-// console.log(Object.values(tinderUser)); //left side wale
+// console.log(Object.values(tinderUser)); //right side wale
 console.log(Object.entries(tinderUser)); 
 //saari key-value pairs ka array banega jo ki ek bade array me store hoga
 
@@ -74,7 +74,7 @@ const course = {
   price : "999",
   courseTeacher : "Aditya"
 }
-//ab in values ko ager use karna ho to kaise kaie karege
+//ab in values ko ager use karna ho to kaise kaise karege
 // course.courseTeacher //1st Method , isi me console.log lagake
 
 const {courseTeacher : teacher} = course // kaha se values exxtract kar rhe he course mese, and kya value extract karni he wo likhenge curly braket me

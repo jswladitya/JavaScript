@@ -1,5 +1,5 @@
 
-//'this'keyword understanding
+//'this' keyword understanding
 const user = {
     username: "Aditya",
     price: 333,
@@ -39,7 +39,7 @@ console.log(this); //{}
 // const chai = function (){
 //     let username = "aditya"
 //     console.log(this);
-       //node ke ander function ke thorough this print karaye to bhot se chheze print hoti he
+       //node ke ander function ke through this print karaye to bhot se chheze print hoti he
 
        //& console.log(this.username)
        //aditya will not get printed, because this works for object not function

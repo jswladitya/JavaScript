@@ -13,6 +13,7 @@ const JsUser = {
     [mySym]: "mykey1",
     age: 18,
     email:"jaiswaladitya116@gmail.com",
+    // "email":"jaiswaladitya116@gmail.com",
     isLoggedIn:false
 }
 
@@ -30,7 +31,7 @@ JsUser.email = "adityathespiderman@gmail.com"
 
 
 
-//Function 
+//Function add kar rahe he object me
 JsUser.greeting = function(){
     console.log("Hello Js User");
 }

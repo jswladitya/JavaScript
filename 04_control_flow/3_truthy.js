@@ -11,7 +11,7 @@ else{
 }
 
 
-//FLASY VALUES --> inke alawa sab truthy values hote he
+//FALSY VALUES --> inke alawa sab truthy values hote he
 // false , 0 ,-0 , BigInt ka 0n , null , "" , undefined , NaN
 
 //truthy values interesting examples
@@ -50,4 +50,3 @@ console.log(val4);//15 //means jo pehle milta he use leleta he
 
 const iceTeaPrice=50;
 iceTeaPrice<=20 ? console.log("Less than 20"): console.log("more than 20");
-//gvg
