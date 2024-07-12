@@ -1,8 +1,10 @@
 //if we store foreach loop in a variable
 //then return statement is mandatory
 
-// const coding = ["js", "ruby", "python", "java", "cpp"]
+const coding = ["js", "ruby", "python", "java", "cpp"]
 
+
+//ignore
 // const values = coding.forEach((item)=>{
 // console.log(item); //js,ruby,python,java,cpp
 // return item;
@@ -64,4 +66,4 @@ let userBooks = books.filter((bk)=>bk.genre === 'history') //yaha hamne har ek b
 
 //since userBooks already declared ho chuka he toh use wapas declare nhi karsakte bas rewrite kar sakte he
 userBooks = books.filter((bk)=>bk.publish >= 2000 && bk.genre==='science')
-console.log(userBooks);
+// console.log(userBooks);

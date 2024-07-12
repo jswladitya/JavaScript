@@ -1,3 +1,5 @@
+//foreach, filter, map, reduce are kindof have same vibe
+
 const coding = ["js", "ruby", "python", "java", "cpp"]
 
 // coding.forEach( function(val){
@@ -5,6 +7,8 @@ const coding = ["js", "ruby", "python", "java", "cpp"]
 //     console.log(val);
 // })
 
+//so we can write it as
+// coding.forEach( (val) => (console.log(val)))
 
 
 //another method for inputting callback function
@@ -24,7 +28,7 @@ const coding = ["js", "ruby", "python", "java", "cpp"]
 
 coding.forEach((item,index,arr)=>{
     //not just items , we can even access index & whole array using for each
-console.log(item,index,arr);
+// console.log(item,index,arr);
 })
 
 
@@ -45,5 +49,6 @@ const myCoding = [
 ]
 
 myCoding.forEach((item)=>{
-    console.log(item.languageFileName);
+    console.log(item.languageFileName); //js,..
+    console.log(item); //{ languageName: 'Javascript', languageFileName: 'js' } ...
 })

@@ -22,7 +22,7 @@ map.set('Fr', " france")
 // console.log(map);
 
 //Lets Apply For of loop on map
-// for (const key of map) //key & value of alag alag array print hoga
+// for (const key of map) //key & value alag alag array print hoga
 
 //we need to destructure it so that it prints keys & values different
 for (const [key , value] of map) {

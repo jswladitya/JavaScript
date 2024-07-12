@@ -10,10 +10,10 @@ for(let i =0; i<=10; i++){
 
 //nested loops ---> printing tables
 for (let i = 1; i <=10; i++) {
-    // console.log(`Table of: ${i}`);
+    console.log(`Table of: ${i}`);
     for(let j = 1; j<=10;j++){
         // console.log(`inner loop value : ${j} & Outer loop ${i}`);
-        // console.log(i + `*` + j + `=` + i*j );
+        console.log(i + `*` + j + `=` + i*j );
     }
     
 }
