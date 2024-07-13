@@ -96,8 +96,8 @@
     buttons.forEach(function(button){
         // now we put on eventlistner on every button
         button.addEventListener('click' , function(e){
-            console.log(e);
-            console.log(e.target); //meeans kis target se ye event aya h wo print karo
+            console.log(e); //sirf e likhenge toh both sare values milenge hame ek hi chahiye
+            console.log(e.target); //meeans kis target se ye event aya h wo print karo , means unique id milti he
 
             if(e.target.id === 'red'){
              body.style.backgroundColor = 'red'
