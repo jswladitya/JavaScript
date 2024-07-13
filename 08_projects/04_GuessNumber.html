@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess The Number</title>
     <style>
-        body{
+        body {
             background-color: black;
             color: white;
+            font-family: monospace;
         }
 
-        #wrapper{
+        #wrapper {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -19,23 +21,26 @@
             text-align: centre;
         }
 
-    #wrapper h1{
-        background-color: red;
-        color: white;
-        text-align: center;
-    }    
+        #wrapper h1 {
+            background-color: red;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            padding: 10px;
+        }
 
-    .form #subt{
-        background-color: red;
-        color: white;
-        border-radius: 20px;
-    }
+        .form #subt {
+            background-color: red;
+            color: white;
+            border-radius: 20px;
+        }
 
-    .guessField{
-        border-radius: 20px;
-    }
+        .guessField {
+            border-radius: 20px;
+        }
     </style>
 </head>
+
 <body>
     <div id="wrapper">
         <h1>Number Guessing Game</h1>
@@ -44,22 +49,23 @@
         <br>
 
         <form class="form">
-            <label for="guessField" id="guess" ></label>
-            <input type="text" id="guessField" class="guessField"  placeholder="Guess a number">
-            <input type="submit" id="subt" value="Submit Guess" class="guessSubmit" >
+            <label for="guessField" id="guess"></label>
+            <input type="text" id="guessField" class="guessField" placeholder="Guess a number">
+            <input type="submit" id="subt" value="Submit Guess" class="guessSubmit">
         </form>
         <div class="resultParas">
-            <p>Previous Guesses: <span class="guesses" ></span></p>
-            <p>Guesses Remaining: <span class="lastResult" >10</span></p>
+            <p>Previous Guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="lastResult">10</span></p>
             <p class="lowOrHi"></p>
 
         </div>
     </div>
 </body>
 <script>
-        const randomNumber = parseInt(Math.random()*10 + 1);
+    const randomNumber = parseInt(Math.random() * 10 + 1);
 
-        const submit = document.querySelector('#subt')
-        const userInput = document.querySelector('#guessField')
+    const submit = document.querySelector('#subt')
+    const userInput = document.querySelector('#guessField')
 </script>
+
 </html>
