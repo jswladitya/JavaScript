@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
 </head>
 <style>
-    body{
+    body {
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(yellow,
-        purple);
+        background: linear-gradient(rgba(0, 0, 0, 0.355),rgba(128, 128, 128, 0.355)
+            );
         background-repeat: no-repeat;
     }
+
+    body div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
+
 <body>
     <div class="container">
         <h1>BMI Calculator</h1>
         <form>
-            <p><label>Height in cm :</label > <input type="text" id="height"> </p>
-            <p><label>Weight in kg :</label> <input type="text" id="weight"> </p>
+            <p><input type="text" id="height" placeholder="Height in cm"> </p>
+            <p><input type="text" id="weight" placeholder="Weight in kg"> </p>
             <button>Calculate</button>
             <div id="results"></div>
             <div id="weight-guide">
@@ -33,31 +42,32 @@
 <script>
     const form = document.querySelector('form')
 
-    form.addEventListener('submit' , function(e){
-        e.preventDefault 
+    form.addEventListener('submit', function (e) {
+        e.preventDefault()
 
-    // document.querySelector('#height').value //here we'll input in string , we need to apply parseInt to convert input we get into a number
-    const height = parseInt(document.querySelector('#height').value)
-    const weight = parseInt(document.querySelector('#weight').value)
+        // document.querySelector('#height').value //here we'll input value in string , we need to apply parseInt to convert input we get into a number
+        const height = parseInt(document.querySelector('#height').value)
+        const weight = parseInt(document.querySelector('#weight').value)
 
-    const results = document.querySelector('#results')
+        const results = document.querySelector('#results')
 
-    if(height === '' || height<0 || isNaN(height)){
-    results.innerHTML= `Please give a valid height : ${height}`
-    }
-    else if(weight === '' || weight<0 || isNaN(weight)){
-    results.innerHTML=`Please give a valid weight : ${weight}`
-    }
+        if (height === '' || height < 20 || isNaN(height)) {
+            results.innerHTML = `Please give a valid height`
+        }
+        else if (weight === '' || weight < 1 || isNaN(weight)) {
+            results.innerHTML = `Please give a valid weight`
+        }
 
-    else{
-        const bmi = (weight / ((height * height)/10000)).toFixed(2)
-        // toFixed(2) means , we want values up till 2 decimal values 
+        else {
+            const bmi = (weight / ((height * height) / 10000)).toFixed(2)
+            // toFixed(2) means , we want values up till 2 decimal values 
 
-        //show the result
-        results.innerHTML = `<span> ${bmi} </span>`;
-    }
+            //show the result
+            results.innerHTML = `<span> ${bmi} </span>`;
+        }
 
 
     });
 </script>
+
 </html>
