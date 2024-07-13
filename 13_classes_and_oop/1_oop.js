@@ -1,20 +1,20 @@
-//Parts of oop --> constructor function, prototypes, classes (new, this keyword kaise aye)
+//Parts of oop --> constructor function, prototypes, classes, Instances (new, this keyword kaise aye)
 
-//4 pillars of oop --> Abstraction, Encapsulation, Inheritance, Polymorphism
+//4 pillars of oop : Abstraction, Encapsulation, Inheritance, Polymorphism
 
 
-
+//objects ---> collection of properties and methods
 //object literal
 const user = {
-    username : "Aditya",
+    username: "Aditya",
     loginCount: 5,
     signedIn: true,
 
-    getUserDetails: function(){
+    getUserDetails: function () {
         // console.log("Got User Details From Database ");
         // console.log(`username: ${this.username}`);
         //it tells ki ham current context ki baat kar rahe he
-        
+
 
         //sirf this print karaye toh current context dedega 
         // it is like function ko bolna ki yaha se ie.., is context se ja kar values lo
@@ -33,27 +33,38 @@ const user = {
 
 
 
+
+
 //constructor function
 
 // const promiseOne = new Promise()
 // const date = new Date()
-// NOTE: new keyword is actually a constructor function, constructor function allows to make multiple instances from 1 object literal
+// NOTE: new keyword is actually a constructor function, constructor function allows to make multiple instances from 1 object literal taki baki values affect na ho
 //new keyword makes new context & isi ko constructor function bolte he
+
 // NOTE: Working Mechanism ::: jaise hi new keyword use karte he to ek empty object create hota he jisko instance bola jata he & ek constructor function call hota he new keyword ke karan , phir this keyword jitne bhi arguments likhe he wo sab uske ander inject ho jate he & then finaly wo function ke ander mil jate he
 
 
 //example
-function User(username, loginCount, isLoggedIn){
+function User(username, loginCount, isLoggedIn) {
     this.username = username;
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn
 
+    // left side wala hamara variable he & right wala wo he jo ham pass karke de rahe he
     // return this //ye bydefault return hota hi he likhne ki zarurat nahi he
 }
+// const userOne = User('aditya', 23, true)
+// console.log(userOne); //perfectly fine till here
 
-const userOne = new User("aditya", 12 , true)
+// const userTwo = User('Code', 3, false)
+// console.log(userOne); //yaha userTwo ne userOne ke data ko overwrite kar dia
 
-const userTwo = new User("Chaiaurcode", 11, false)
-console.log(userOne);
-console.log(userTwo);
+
+//now,
+const userOne = new User("aditya", 12, true)
+
+const userTwo = new User("code", 11, false)
+console.log(userOne); //getting data of userOne only coz new keyword created new context or instance
+console.log(userTwo); //same way here
 
