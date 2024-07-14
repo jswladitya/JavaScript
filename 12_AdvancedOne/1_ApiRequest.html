@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body style="background-color: black; color: aliceblue;">
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState">MDN DOCS</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState">MDN DOCS</a>
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
@@ -17,17 +19,18 @@
     //jo request bhejna he uper uske status ko track karega niche wala function
 
     //onreadystatechange ek function leta he ki jab state change ho to kya karna he
-    xhr.onreadystatechange = function(){
+    xhr.onreadystatechange = function () {
         console.log(xhr.readyState);
 
-        if(xhr.readyState === 4){
-        // console.log(this.responseText);
+        if (xhr.readyState === 4) {
+            // console.log(this.responseText);
 
             const data = JSON.parse(this.responseText)
             //data ata he string me so, we need to change string to object
-        console.log(data.followers);
+            console.log(data.followers);
         }
     }
     xhr.send();
 </script>
+
 </html>
