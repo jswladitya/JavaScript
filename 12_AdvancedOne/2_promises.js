@@ -1,5 +1,5 @@
 //promises are the objects
-//they are used to doan async task, DB calls , cryptography, network
+//they are used to do an async task, DB calls , cryptography, network
 
 //Making of promises
 
@@ -7,7 +7,7 @@
 const promiseOne = new Promise(function (resolve, reject) {
     setTimeout(function () {
         // console.log('Async task is completed');
-        resolve()
+        resolve() //resolve nahi likha toh ye async task to complete ho jayega but promise kabhi resolve nahi hoga
     }, 1000)
 })
 
@@ -38,6 +38,7 @@ const promiseThree = new Promise(function (resolve, reject) {
     setTimeout(function () {
 
         // jyada tar resolve me object pass kia jata he
+        //promise se consume me data pass karne ka kaam bhi resolve karega
         resolve({ username: "Aditya", email: "jaiswaladitya116@gmail.com" })
     }, 1000)
 })
@@ -122,7 +123,7 @@ consumePromiseFive();
 //    try{
 //     const response = await fetch('https://jsonplaceholder.typicode.com/users')
 
-//     // response.json() //url se jo bhi data aa rha he wo string he & use hame object me parse karna hota he
+//     // response.json() //url se jo bhi data aa rha he wo string he & use hame object me parse karna padta he
 //     // const data = response.json()
 //     const data = await response.json()
 //     console.log(data);
