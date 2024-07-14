@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Background Color Changer For Every Second</title>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body style="background-color: black; color: white">
-    <h1 style="font-weight: bolder">
-      Press Start to change the background color every second
-    </h1>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
-  </body>
-  <script>
-    // gernerate random colors
-    const randomColor = function () {
-      const hex = "0123456789ABCDEF";
-      let color = "#";
-      for (let i = 0; i < 6; i++) {
-        color += hex[Math.floor(Math.random() * 16)];
-        //its a ramdom positions of hex
-      }
-      return color;
-    };
-    
-    // console.log(randomColor); //yes it is generating random hex colors
-    let intervalId;
-    const startChangingColor = function(){
 
-      if(intervalId == null){
-        // means ager intervalId me kuch he hi nahi toh me usme ye add karana chahta he & bina ise lagaye bhi kaam ho jata but its a safety check
-        intervalId = setInterval(changeBgColor,500)
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background Color Changer For Every Second</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      text-align: center;
+    }
+  </style>
+</head>
 
-      function changeBgColor(){
-        document.body.style.backgroundColor = randomColor();
+<body style="background-color: black; color: white">
+  <h1 style="font-weight: bolder">
+    Press Start to change the background color every second
+  </h1>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+</body>
+<script>
+  // gernerate random colors
+  const randomColor = function () {
+    const hex = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += hex[Math.floor(Math.random() * 16)];
+      //its a ramdom positions of hex
+    }
+    return color;
+  };
 
-      }
+  // console.log(randomColor); //yes it is generating random hex colors
+  let intervalId;
+  const startChangingColor = function () {
+
+    if (intervalId == null) {
+      // means ager intervalId me kuch he hi nahi toh me usme ye add karana chahta he & bina ise lagaye bhi kaam ho jata but its a safety check
+      intervalId = setInterval(changeBgColor, 500)
     }
 
-    const stopChangingColor = function(){
-      // clearInterval(setInterval(changeBgColor,1000)) //nahi chalega so, bracket ke ander wale ko variable me store karo & use scope ke bahar declare karo
-      clearInterval(intervalId);
-      intervalId = null; //kaam ho jaye to intervalId khali kardo to free up memeory ALSO apply checks onit for better code
+    function changeBgColor() {
+      document.body.style.backgroundColor = randomColor();
+
     }
+  }
+
+  const stopChangingColor = function () {
+    // clearInterval(setInterval(changeBgColor,1000)) //nahi chalega so, bracket ke ander wale ko variable me store karo & use scope ke bahar declare karo
+    clearInterval(intervalId);
+    intervalId = null; //kaam ho jaye to intervalId khali kardo to free up memeory ALSO apply checks onit for better code
+  }
 
 
 
-    document.querySelector('#start').addEventListener('click' , startChangingColor)
-    document.querySelector('#stop').addEventListener('click' , stopChangingColor)
-  </script>
+  document.querySelector('#start').addEventListener('click', startChangingColor)
+  document.querySelector('#stop').addEventListener('click', stopChangingColor)
+</script>
+
 </html>
