@@ -13,7 +13,7 @@ const user = {
     getUserDetails: function () {
         // console.log("Got User Details From Database ");
         // console.log(`username: ${this.username}`);
-        //it tells ki ham current context ki baat kar rahe he
+        //it tells ki ham current context ki baat kar rahe he & ager nahi lagayenge this toh error throw hoga because function apna alag execution context banata he 
 
 
         //sirf this print karaye toh current context dedega 
@@ -39,8 +39,8 @@ const user = {
 
 // const promiseOne = new Promise()
 // const date = new Date()
-// NOTE: new keyword is actually a constructor function, constructor function allows to make multiple instances from 1 object literal taki baki values affect na ho
-//new keyword makes new context & isi ko constructor function bolte he
+// NOTE: new keyword is actually a constructor function, constructor function allows to make multiple instances in 1 object literal taki baki values affect na ho us object me
+//new keyword makes new context or new instance & isi ko constructor function bolte he
 
 // NOTE: Working Mechanism ::: jaise hi new keyword use karte he to ek empty object create hota he jisko instance bola jata he & ek constructor function call hota he new keyword ke karan , phir this keyword jitne bhi arguments likhe he wo sab uske ander inject ho jate he & then finaly wo function ke ander mil jate he
 
@@ -51,7 +51,7 @@ function User(username, loginCount, isLoggedIn) {
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn
 
-    // left side wala hamara variable he & right wala wo he jo ham pass karke de rahe he
+    // left side wala hamara variable he & right wala wo he jo ham pass karke dene wale he
     // return this //ye bydefault return hota hi he likhne ki zarurat nahi he
 }
 // const userOne = User('aditya', 23, true)
