@@ -19,13 +19,16 @@ function createUser(username, score){
       this.score = score
 }
 
+//adding or injecting our own functionality in prototype kyuki prototype ke ander wahi hota he
 createUser.prototype.increment = function(){
     this.score++
 }
+
 createUser.prototype.printMe = function(){
     console.log(`price is ${this.score}`);
 }
 
+//jab apne funcion ka chai me values transfer kari toh apne bataya nhi ki ye additional properties ayi he createUser me
 // const chai = createUser("chai", 25)
 const chai = new createUser("chai", 25)
 const tea = createUser("tea", 250)
