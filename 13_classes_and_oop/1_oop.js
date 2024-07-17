@@ -68,3 +68,5 @@ const userTwo = new User("code", 11, false)
 console.log(userOne); //getting data of userOne only coz new keyword created new context or instance
 console.log(userTwo); //same way here
 
+//new keyword apko ek alag copy dedeta he ab us copy ke sath kya karte ho wo apke hawale he app jo karte ho uske sath wo original me effect nahi daalti
+
