@@ -1,5 +1,8 @@
+let myName = "Aditya   "
+// console.log(myName.length);
+// console.log(myName.truelength); // i want ki aya ek method ho trueLength ki
 
-
+//now.
 let myHeros = ["thor", "spiderman"]
 
 let heroPower = {
@@ -7,10 +10,26 @@ let heroPower = {
     spiderman : "swing",
 
     getSpiderPower : function(){
-        console.log(`Spidy power is ${this.spiderman}`);
+        // console.log(`Spidy power is ${this.spiderman}`);
     }
 }
 
+
+//ab aditya naam ka method saare objects, arrays, strings sab me use kar sakte he kyuki sab akhir me object hi hote he but reverse is not true
+Object.prototype.aditya = function(){
+    // console.log(`aditya is present in all objects`);
+}
+
+//array pe laga ke dekh he object me access kar pate he ki nahi
+Array.prototype.heyAditya = function(){
+    // console.log(`Aditya says hello`);
+}
+
+
+heroPower.aditya()
+myHeros.aditya()
+// heroPower.heyAditya() //heropower ek object he & since hamne arrays pe heyAditya naam ka mrthod define kia tha islie wo method object pe kaam nahi karega it means heyAditya ki power sirf array ke pass hi hoga
+myHeros.heyAditya() //worked
 
 
 
