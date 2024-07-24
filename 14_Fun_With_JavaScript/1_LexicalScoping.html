@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+
+</head>
+<body style="background-color: black;">
+    
+</body>
+<script>
+//     function init(){
+//     let name = "Mozilla"
+//     function displayName(){
+//         //displayName() is the inner function, that forms the closure
+//         console.log(name); //trying to use variable declared in the parent function
+//     }
+//     displayName()
+// }
+// init();
+
+
+//another example
+
+// function outer(){
+//     let username = "aditya"
+// }
+// console.log(username);
+//here ham username ko access kar rahe he scope bahar jisme wo declare hua he, so aisa nahi ho sakta
+
+
+//but, ager app usi function ke ander ek aur inner function bana dete ho toh wo inner function outer function ko access karsakta he & this is known as Lexical Scoping
+function outer(){
+    let username = "aditya"
+    function inner(){
+        console.log("Inner:",username);
+    }
+    inner(); //it can access
+    
+    function innerTwo(){
+        console.log("Inner:",username);
+    }
+    innerTwo(); //it can also access
+}
+outer()
+console.log("too Outer:",username); //again, it cannot access
+</script>
+</html>

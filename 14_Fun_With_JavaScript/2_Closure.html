@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: olive;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+
+    // function makeFunc(){
+    //     const name = "Mozilla"
+    //     function displayName(){
+    //         console.log(name);
+    //     }
+    //     return displayName; //due to lexical scoping displayName function ke sath sath pura parent function ager exist karta ho toh uska bhi pura scope pass ho jata he
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+    
+    //since function ka scope tabhi tak chalta he jab tak wo execute na hojaye
+</script>
+
+<script>
+
+    //Let us see the Practical
+
+    
+    //  document.getElementById('orange').onclick= function(){
+    //     document.body.style.backgroundColor = `orange`
+    //  }
+    //  document.getElementById('green').onclick= function(){
+    //     document.body.style.backgroundColor = `green`
+    //  }
+     //ager aise likhenge toh reapeat hi kar rahe he bas what if both saare buttons pe lagana h0
+
+     function clickHandler(color){
+        //   document.body.style.backgroundColor = `${color}`
+
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+     }
+
+     document.getElementById('orange').onclick =  clickHandler('orange')
+     document.getElementById('green').onclick =  clickHandler('green')
+</script>
+</html>
