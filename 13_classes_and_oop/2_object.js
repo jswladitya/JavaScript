@@ -11,6 +11,7 @@ console.log(MultiplyBy5.prototype) //{}
 it means in javascript everything can be treated as objects
 ie.., function, function bhi he aur object bhi he kyuki function ka jo default behaviour hpta he wo toh hota hi he but, function ko object ki tarah bhi behave kara sakte he
 because end of everything har ek cheez ja ke milti he object se hi due its javascript's prototypal behaviour or prototypal inheritance
+& if object pe koi functionality add karte he to wo functionility sabhi child ko milti he eg..,Array, String but reverse is not true
 */
 
 
@@ -28,10 +29,11 @@ createUser.prototype.printMe = function(){
     console.log(`price is ${this.score}`);
 }
 
-//jab apne funcion ka chai me values transfer kari toh apne bataya nhi ki ye additional properties ayi he createUser me
+//jab apne function ka chai me values transfer kari toh apne bataya nhi ki ye additional properties ayi he createUser me
+//ab is function ke users alag alag ho sakte he
 // const chai = createUser("chai", 25)
 const chai = new createUser("chai", 25)
-const tea = createUser("tea", 250)
+const tea = new createUser("tea", 250)
 
 chai.printMe()
 
