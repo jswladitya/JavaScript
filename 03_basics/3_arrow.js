@@ -6,7 +6,7 @@ const user = {
 
     welcomeMessage: function () {
         console.log(`${this.username} , welcome to website`);
-        //means is scope me jitne bhi variables he unhe excess karne ke lie this lagate he
+        //means is scope me jitne bhi variables he unhe excess karne ke lie 'this' lagate he
 
         //NOTE: sirf this print karaye toh wo apne object ka pura current context print karega
         // console.log(this);
@@ -42,7 +42,7 @@ console.log(this); //{}
        //node ke ander function ke through this print karaye to bhot se chheze print hoti he
 
        //& console.log(this.username)
-       //aditya will not get printed, because this works for object not function
+       //aditya will not get printed, because 'this' works for object not function
 // }
 
 
