@@ -5,6 +5,9 @@ class User {
         this.email= email;
         this.password=password;
     }
+
+    //Adding Functionality
+    //he ye function hi but yaha inka naam nhi rakhte class ke ander 
     encryptPassword(){
         return `${this.password}abc`
     }
@@ -23,7 +26,7 @@ console.log(chai.changeUsername());
 
 
 //Here, exactly what is happening behind the scene
-//sabse paehle ek function hota 
+//sabse pehle ek function hota 
 function User(username, email, password){
     this.username= username;
         this.email= email;
