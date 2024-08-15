@@ -7,6 +7,8 @@ class User {
         console.log(`Username: ${this.username}`);
     }
 
+    // i want ki jaise hi user bane waise hi use ek unique id assign ho jaye
+    //static keyword is method ko access hone se rok deta he since ham id ka access sabko nahi dena chahte
     static createId(){
         return `123`
     }
