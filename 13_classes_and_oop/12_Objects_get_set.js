@@ -1,5 +1,8 @@
+//#### Learn Again #####
+
 //not used in recent times, mostly class based syntax milega
 
+//Objects ke through getters settres 
 const User = {
     _email : 'h@hc.com',
     _password : 'abc',
