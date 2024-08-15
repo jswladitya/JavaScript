@@ -10,6 +10,7 @@ class User {
         return this._email.toUpperCase()
     }
 
+    //setters ko return nahi karte 
     set email(value){
        this._email = value
     }
@@ -24,3 +25,4 @@ class User {
 }
 const aditya = new User("aditya@123", "123")
 console.log(aditya.password);
+console.log(aditya.email);
