@@ -7,12 +7,19 @@
   <title>Background Color Changer For Every Second</title>
   <style>
     body {
+      font-family: monospace;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin: auto;
       text-align: center;
+    }
+    .buttons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
     }
   </style>
 </head>
@@ -21,8 +28,10 @@
   <h1 style="font-weight: bolder">
     Press Start to change the background color every second
   </h1>
-  <button id="start">Start</button>
-  <button id="stop">Stop</button>
+  <div class="buttons">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </div>
 </body>
 <script>
   // gernerate random colors
