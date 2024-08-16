@@ -56,6 +56,7 @@
 
     function changeBgColor() {
       document.body.style.backgroundColor = randomColor();
+      //ise chalate rehne kie lie interval me daal na padega
 
     }
   }
@@ -63,10 +64,10 @@
   const stopChangingColor = function () {
     // clearInterval(setInterval(changeBgColor,1000)) //nahi chalega so, bracket ke ander wale ko variable me store karo & use scope ke bahar declare karo
     clearInterval(intervalId);
-    intervalId = null; //kaam ho jaye to intervalId khali kardo to free up memeory ALSO apply checks onit for better code
+    intervalId = null; //kaam ho jaye to intervalId khali kardo taki ager fir start pe click kare to efficiently run kare
+    //now, ab if condition laga ke li jaise hi value null ho jaye waise hi hame interval chalana he
+
   }
-
-
 
   document.querySelector('#start').addEventListener('click', startChangingColor)
   document.querySelector('#stop').addEventListener('click', stopChangingColor)
