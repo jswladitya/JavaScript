@@ -7,7 +7,7 @@
     <title>Guess The Number</title>
     <style>
         body {
-            background-color: gainsboro;
+            background-color: gray;
             color: white;
             font-family: monospace;
         }
@@ -46,7 +46,7 @@
         <h1>Number Guessing Game</h1>
         <p>Try and guess a random number between 1 and 100</p>
         <p>You have 10 attempts to guess the right number</p>
-        <br>
+    </br>
 
         <form class="form">
             <label for="guessField" id="guess"></label>
@@ -85,7 +85,7 @@
     // Actual Logic Begins
 
     //jo bhi guess karega user use array me store kar lenge aur dikhayenge user ko ki ye saare aapne already guess kar lia he
-    let PrevGuess = []
+    let PrevGuess = [] //jo bhi values user submit karega unhe ham array me store karte jayenge
     let numOfGuesses = 1 //initial no of guess is 1
 
     let playGame = true
@@ -98,6 +98,7 @@
             validateGuess(guess)
         })
     }
+
     //Now
     function validateGuess(guess) {
         //ye mujhe dekhna he ki user ne valid number guess kara ki nai kara means value 1 aur 100 ke bich me he ya nahi
@@ -112,7 +113,9 @@
         }
         else {
             PrevGuess.push(guess) //user ke guesses array me store kar rahe
-            if (numOfGuesses >= 11) {
+
+            //ho sakta he user ka ye last atempt ho iske baad me nahi karne dena chahta
+            if (numOfGuesses === 11) {
                 cleanupGuess(guess)
                 displayMessage(`Game Over , Random number was ${randomNumber}`)
                 endGame()
@@ -143,7 +146,7 @@
             userInput.value = ""
             guessSlot.innerHTML += `${guess}  `
             numOfGuesses++
-            Remaining.innerHTML += `${11 - numOfGuesses}`
+            Remaining.innerHTML = `${10 - numOfGuesses}`
         }
 
         function displayMessage(message) {
@@ -152,21 +155,21 @@
             lowOrHi.innerHTML = `<h2> ${message} </h2>`
 
         }
-        
+
         function endGame() {
             userInput.value = ' ' // sabse pehle kia values clean
             userInput.setAttribute('disabled', '')
             p.classList.add('button')
             p.innerHTML = `<h2 id = "New Game">Start new game</h2>`
             StartOver.appendChild(p)
-            playGame=false
+            playGame = false
             newGame()
         }
 
         function newGame() {
-           const newGameBtn =  document.querySelector('#newGame')
-           newGameBtn.addEventListener('click', function(e){
-                randomNumber =  parseInt(Math.random() * 100 + 1)
+            const newGameBtn = document.querySelector('#newGame')
+            newGameBtn.addEventListener('click', function (e) {
+                randomNumber = parseInt(Math.random() * 100 + 1)
                 PrevGuess = [] //reset
                 numOfGuesses = 1
                 guessSlot.innerHTML = ''
@@ -174,8 +177,8 @@
                 userInput.removeAttribute('disabled')
                 StartOver.removeChild(p)
 
-                playGame=true
-           })
+                playGame = true
+            })
         }
     }
 </script>
