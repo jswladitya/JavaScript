@@ -115,7 +115,7 @@
             PrevGuess.push(guess) //user ke guesses array me store kar rahe
 
             //ho sakta he user ka ye last atempt ho iske baad me nahi karne dena chahta
-            if (numOfGuesses === 11) {
+            if (numOfGuesses >= 11) {
                 cleanupGuess(guess)
                 displayMessage(`Game Over , Random number was ${randomNumber}`)
                 endGame()
