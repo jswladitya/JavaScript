@@ -24,7 +24,7 @@ console.log(gameName.__proto__); //{}means object mila he, 2 underscore he
 console.log(gameName.length);//8
 
 console.log(gameName.toUpperCase());// print original string in uppercase
-console.log(gameName.charAt(3)); //t , kitwi position pe konsa character he
+console.log(gameName.charAt(3)); //t , 3rd index pe konsa character he
 console.log(gameName.indexOf('i')); // 2 , i konsi position pe he
 
 const anotherString = gameName.substring(0,4)

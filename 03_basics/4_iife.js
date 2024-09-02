@@ -1,5 +1,5 @@
 //Immediately invoked function expressions (IIFE)
-//ham chahte ki hamara function immediately execute ho jaye global scope se pollute hue bina
+//ham chahte ki hamara function immediately execute ho jaye global scope se pollute hue bina means bacche bado se icecream na mange
 
 //normal method --> ye global scope variables he ya jo bhi declarations he unse pollute ho sakte he toh un polltants ko remove karne ke lie we have to use IIFE
 // function chai() {
