@@ -24,5 +24,6 @@ class Teacher extends User {
     }
 }
 
-const iphone = Teacher("Iphone", "i@phone.com")
-console.log(iphone.logMe());
+const iphone = new Teacher("Iphone", "i@phone.com")
+iphone.logMe()
+// console.log(iphone.createId()); //unable to access
