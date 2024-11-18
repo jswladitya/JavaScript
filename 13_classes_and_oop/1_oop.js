@@ -42,8 +42,12 @@ const user = {
 // NOTE: new keyword is actually a constructor function, constructor function allows to make multiple instances in 1 object literal taki baki values affect na ho us object me
 //new keyword makes new context or new instance & isi ko constructor function bolte he
 
-// NOTE: Working Mechanism ::: jaise hi new keyword use karte he to ek empty object create hota he jisko instance bola jata he & ek constructor function call hota he new keyword ke karan , phir this keyword jitne bhi arguments likhe he wo sab uske ander inject ho jate he & then finaly wo function ke ander mil jate he
-
+/*
+ NOTE: Working Mechanism ::: 
+ 1. jaise hi new keyword use karte he to ek empty object create hota he (isme saara data aa jata he jo hamne constructor function me likha he) jisko instance bola jata he
+ 2. ek constructor function call hota he new keyword ke karan 
+ 3. phir this keyword jitne bhi arguments likhe he wo sab uske ander inject ho jate he 4. then finaly wo function ke ander mil jate he
+*/
 
 //example
 function User(username, loginCount, isLoggedIn) {
@@ -70,3 +74,5 @@ console.log(userTwo); //same way here
 
 //new keyword apko ek alag copy dedeta he ab us copy ke sath kya karte ho wo apke hawale he app jo karte ho uske sath wo original me effect nahi daalti
 
+console.log(userOne.constructor);//[function:User]
+//means constructer is a reference to itself

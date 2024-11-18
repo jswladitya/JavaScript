@@ -26,10 +26,10 @@ Array.prototype.heyAditya = function(){
 }
 
 
-heroPower.aditya()
-myHeros.aditya()
+// heroPower.aditya()
+// myHeros.aditya()
 // heroPower.heyAditya() //heropower ek object he & since hamne arrays pe heyAditya naam ka mrthod define kia tha islie wo method object pe kaam nahi karega it means heyAditya ki power sirf array ke pass hi hoga
-myHeros.heyAditya() //worked
+// myHeros.heyAditya() //worked
 
 
 
@@ -68,9 +68,9 @@ Object.setPrototypeOf(TeachingSupport, Teacher)
 let anotherUsername = "ChaiAurCode   "
 
 String.prototype.trueLength = function(){
-console.log(`${this}`);
+console.log(`${this}`); //jisne call kia wahi this he , yaha this chaiaurcode he
 console.log(`True length is : ${this.trim().length}`);
 }
 anotherUsername.trueLength()
-"aditya".trueLength()
-"iceTea".trueLength()
+"aditya".trueLength() //yaha this "aditya" he
+"iceTea".trueLength() //lly
