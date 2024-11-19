@@ -16,13 +16,15 @@
     //     function displayName(){
     //         console.log(name);
     //     }
-    //     return displayName; //due to lexical scoping displayName function ke sath sath pura parent function ager exist karta ho toh uska bhi pura scope pass ho jata he
-    // }
-
+    //     return displayName; 
+    /* Note : yaha hamne inner function hi return kar dia he uska reference , use call nahi kia hamne. so, due to lexical scoping displayName function ke sath sath pura parent function ager exist karta ho toh uska bhi pura scope return ho jata he
+    */
+    // }          
     // const myFunc = makeFunc();
     // myFunc();
     
-    //since function ka scope tabhi tak chalta he jab tak wo execute na hojaye
+    //since function ka scope tabhi tak chalta he jab tak wo execute na hojaye, ek baar return ho gaya toh us function ka  functional execution bhi call stack se hatt jata he & yaha hamne outer function ko hi return karwa dia
+    //but due to lexical scoping yha pura scope return ho jata he
 </script>
 
 <script>
@@ -40,6 +42,7 @@
 
      function clickHandler(color){
         //   document.body.style.backgroundColor = `${color}`
+        // aise karenge toh bina button click kie hi function execute ho jayega
 
         return function(){
             document.body.style.backgroundColor = `${color}`
