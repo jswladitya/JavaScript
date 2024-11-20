@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
+    <title>How to access parent to child and vice versa</title>
 </head>
 <body style="background-color: black; color: white;">
     <div class="parent">
@@ -44,9 +44,13 @@
 
     //understanding child Nodes
     // console.log("NODES :" , parent.childNodes);
-    // Means, parent ke childNodes ka matlab ye nahi ki monday, tuesday, wednesday, thursday hi dega , yaha basically complex tree structure banta he aur yaha sab count hota he jaise line break, comment etc so is example me hame 4 nahi 9 childNodes ya NodeList milte he
+    // Means, parent ke childNodes ka matlab ye nahi ki monday, tuesday, wednesday, thursday hi dega , yaha basically complex tree structure banta he aur yaha sab count hota he jaise har ek pehla line break, comment etc so is example me hame 4 nahi 9 childNodes ya NodeList milte he
 
 </script>
 <!-- Node list & html collections are not pure arrays they can be converted to array depend on usecases
+
+specially, html collection has to be converted to array to apply looping concepts
+nodeList bydefault has forEach concept for looping 
+
 while using queryselectorall since we gets node list so we need to address by indexing what child we want to manipulate-->
 </html>

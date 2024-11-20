@@ -22,16 +22,41 @@
     // }          
     // const myFunc = makeFunc();
     // myFunc();
+
+    // Simple : makeFunc ko jab bhi call karoge wo ek function return karega & jab ham us returned function ko call karenge wo console karega "Mozilla"
     
-    //since function ka scope tabhi tak chalta he jab tak wo execute na hojaye, ek baar return ho gaya toh us function ka  functional execution bhi call stack se hatt jata he & yaha hamne outer function ko hi return karwa dia
-    //but due to lexical scoping yha pura scope return ho jata he
+    /*
+    since function ka scope tabhi tak chalta he jab tak wo execute na hojaye, ek baar return ho gaya toh us function ka  functional execution bhi call stack se hatt jata he & yaha hamne outer function ko hi return karwa dia
+    but due to lexical scoping yha pura scope return ho jata he
+
+    Resourses : 
+    1. Chai aur code video 
+    2. Piyush Garg : https://www.youtube.com/watch?v=WxYmFqHrf5o
+    */
+</script>
+
+<script>
+    //Let us see the Practical - 1
+    function adder(num){
+        function add(b){
+            console.log(num + b);
+        }
+
+        return add;
+    }
+
+    const addTo5 = adder(5)
+    addTo5(2)
+    addTo5(5)
+
+    const addTo10 = adder(10)
+    addTo5(2)
+    addTo5(5)
 </script>
 
 <script>
 
-    //Let us see the Practical
-
-    
+    //Let us see the Practical - 2
     //  document.getElementById('orange').onclick= function(){
     //     document.body.style.backgroundColor = `orange`
     //  }
