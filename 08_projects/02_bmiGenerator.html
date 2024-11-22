@@ -43,7 +43,7 @@
     const form = document.querySelector('form')
 
     form.addEventListener('submit', function (e) {
-        e.preventDefault()
+        e.preventDefault() //to stop submittion
 
         // document.querySelector('#height').value //here we'll input value in string , we need to apply parseInt to convert input we get into a number
         const height = parseInt(document.querySelector('#height').value)
