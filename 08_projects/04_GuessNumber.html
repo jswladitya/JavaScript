@@ -46,7 +46,7 @@
         <h1>Number Guessing Game</h1>
         <p>Try and guess a random number between 1 and 100</p>
         <p>You have 10 attempts to guess the right number</p>
-    </br>
+        </br>
 
         <form class="form">
             <label for="guessField" id="guess"></label>
@@ -115,7 +115,7 @@
             PrevGuess.push(guess) //user ke guesses array me store kar rahe
 
             //ho sakta he user ka ye last atempt ho iske baad me nahi karne dena chahta
-            if (numOfGuesses >= 11) {
+            if (numOfGuesses === 11) {
                 cleanupGuess(guess)
                 displayMessage(`Game Over , Random number was ${randomNumber}`)
                 endGame()
@@ -126,60 +126,60 @@
                 checkGuess(guess)
             }
         }
+    }
 
-        function checkGuess(guess) {
-            //message dikhyenge ki guessed value valid he ya nhi ya kaisa he
-            if (guess === randomNumber) {
-                displayMessage("You Guessed It Correct!")
-                endGame()
-            }
-            else if (guess < randomNumber) {
-                displayMessage("Number is too low")
-            }
-            else if (guess > randomNumber) {
-                displayMessage("Number is too High")
-            }
+    function checkGuess(guess) {
+        //message dikhyenge ki guessed value valid he ya nhi ya kaisa he
+        if (guess === randomNumber) {
+            displayMessage("You Guessed It Correct!")
+            endGame()
         }
-
-        function cleanupGuess(guess) {
-            //cleaning Up
-            userInput.value = ""
-            guessSlot.innerHTML += `${guess}  `
-            numOfGuesses++
-            Remaining.innerHTML = `${10 - numOfGuesses}`
+        else if (guess < randomNumber) {
+            displayMessage("Number is too low")
         }
-
-        function displayMessage(message) {
-            //Dom ke sath interact karega
-            //user ki input value empty karenge kyuki use next guess karna he Phir innerHtml ke ander hamare guess ko add kardenge & numbers ko kam karenge
-            lowOrHi.innerHTML = `<h2> ${message} </h2>`
-
+        else if (guess > randomNumber) {
+            displayMessage("Number is too High")
         }
+    }
 
-        function endGame() {
-            userInput.value = ' ' // sabse pehle kia values clean
-            userInput.setAttribute('disabled', '')
-            p.classList.add('button')
-            p.innerHTML = `<h2 id = "New Game">Start new game</h2>`
-            StartOver.appendChild(p)
-            playGame = false
-            newGame()
-        }
+    function cleanupGuess(guess) {
+        //cleaning Up
+        userInput.value = ""
+        guessSlot.innerHTML += `${guess}  `
+        numOfGuesses++
+        Remaining.innerHTML = `${10 - numOfGuesses}`
+    }
 
-        function newGame() {
-            const newGameBtn = document.querySelector('#newGame')
-            newGameBtn.addEventListener('click', function (e) {
-                randomNumber = parseInt(Math.random() * 100 + 1)
-                PrevGuess = [] //reset
-                numOfGuesses = 1
-                guessSlot.innerHTML = ''
-                Remaining.innerHTML += `${11 - numOfGuesses}`
-                userInput.removeAttribute('disabled')
-                StartOver.removeChild(p)
+    function displayMessage(message) {
+        //Dom ke sath interact karega
+        //user ki input value empty karenge kyuki use next guess karna he Phir innerHtml ke ander hamare guess ko add kardenge & numbers ko kam karenge
+        lowOrHi.innerHTML = `<h2> ${message} </h2>`
 
-                playGame = true
-            })
-        }
+    }
+
+    function endGame() {
+        userInput.value = ' ' // sabse pehle kia values clean
+        userInput.setAttribute('disabled', '')
+        p.classList.add('button')
+        p.innerHTML = `<h2 id = "New Game">Start new game</h2>`
+        StartOver.appendChild(p)
+        playGame = false
+        newGame()
+    }
+
+    function newGame() {
+        const newGameBtn = document.querySelector('#newGame')
+        newGameBtn.addEventListener('click', function (e) {
+            randomNumber = parseInt(Math.random() * 100 + 1)
+            PrevGuess = [] //reset
+            numOfGuesses = 1
+            guessSlot.innerHTML = ''
+            Remaining.innerHTML += `${11 - numOfGuesses}`
+            userInput.removeAttribute('disabled')
+            StartOver.removeChild(p)
+
+            playGame = true
+        })
     }
 </script>
 

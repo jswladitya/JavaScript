@@ -27,6 +27,6 @@ eg.., one() ke ander two() ko call kai he and two() ke ander three() ko , toh ka
 
 
 NOTE : Revision Videos
-1. Complete Ciding : https://www.youtube.com/watch?v=UXWBl77dq3A
+1. Complete Coding : https://www.youtube.com/watch?v=UXWBl77dq3A
 
 2. Chai aur Code :  https://www.youtube.com/watch?v=ByhtOgF6uYM
