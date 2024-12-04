@@ -148,3 +148,5 @@ fetch('https://jsonplaceholder.typicode.com/users')
     console.log(data);
 })
 .catch( (error) => console.log(error))
+//NOTE : if there is a error like 404 & stuff like that , it doesn't mean network request reject hui he , actually ntwork request hui he tabhi toh error ke response aya he 
+//NOTE : https://www.youtube.com/watch?v=_TjtAyMkiTI&t=10173s (at 6:35)

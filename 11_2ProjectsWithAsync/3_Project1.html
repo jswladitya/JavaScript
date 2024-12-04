@@ -45,26 +45,25 @@
     return color;
   };
 
-  // console.log(randomColor); //yes it is generating random hex colors
-  let intervalId;
+  let changeColorInterval;
   const startChangingColor = function () {
 
-    if (intervalId == null) {
-      // means ager intervalId me kuch he hi nahi toh me usme ye add karana chahta he & bina ise lagaye bhi kaam ho jata but its a safety check
-      intervalId = setInterval(changeBgColor, 500)
+    if (changeColorInterval == null) {
+      // means ager changeColorInterval me kuch he hi nahi toh me usme ye add karana chahta he ki ab isme ye interval he | bina ise lagaye bhi kaam ho jata but its a safety check
+      changeColorInterval = setInterval(changeBgColor, 500)
     }
-
     function changeBgColor() {
       document.body.style.backgroundColor = randomColor();
       //ise chalate rehne kie lie interval me daal na padega
+
 
     }
   }
 
   const stopChangingColor = function () {
     // clearInterval(setInterval(changeBgColor,1000)) //nahi chalega so, bracket ke ander wale ko variable me store karo & use scope ke bahar declare karo
-    clearInterval(intervalId);
-    intervalId = null; //kaam ho jaye to intervalId khali kardo taki ager fir start pe click kare to efficiently run kare
+    clearInterval(changeColorInterval);
+    changeColorInterval = null; //kaam ho jaye to changeColorInterval khali kardo taki ager fir start pe click kare to efficiently run kare
     //now, ab if condition laga ke li jaise hi value null ho jaye waise hi hame interval chalana he
 
   }
