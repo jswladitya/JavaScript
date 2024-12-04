@@ -8,6 +8,12 @@
 <body style="background-color: olive;">
     <button id="orange">Orange</button>
     <button id="green">Green</button>
+
+
+
+    <!-- piyush garg  -->
+    <h1 id="my-name" style="font-size:50px"></h1>
+    <button id="my-btn">click me</button>
 </body>
 <script>
 
@@ -29,6 +35,9 @@
     since function ka scope tabhi tak chalta he jab tak wo execute na hojaye, ek baar return ho gaya toh us function ka  functional execution bhi call stack se hatt jata he & yaha hamne outer function ko hi return karwa dia
     but due to lexical scoping yha pura scope return ho jata he
 
+
+    //SUMMARY : in closure, ham inner function ko return karwa dete he through outer function , to sirf function return nahi hota uska pura scope return hota he yani pura lexical scoper return hota
+
     Resourses : 
     1. Chai aur code video 
     2. Piyush Garg : https://www.youtube.com/watch?v=WxYmFqHrf5o
@@ -36,27 +45,47 @@
 </script>
 
 <script>
-    //Let us see the Practical - 1
-    function adder(num){
-        function add(b){
-            console.log(num + b);
+    // function adder(num){
+    //     function add(b){
+    //         console.log(num + b);
+    //     }
+
+    //     return add;
+    // }
+    // //technically adder function ko call karne se wo add function return kar raha he jise call karne se kaam ho raha he
+    // const addTo5 = adder(5)
+    // addTo5(2)
+    // addTo5(5)
+
+    // const addTo10 = adder(10)
+    // addTo5(2)
+    // addTo5(5)
+
+    //practical usecase 1
+
+    const myName = document.getElementById("my-name")
+    const btn = document.getElementById("my-btn")
+
+    function makeTextSizer(size){
+
+        function changeSize(){
+            myName.style.fontSize = `${size}px`
         }
 
-        return add;
+        return changeSize;
     }
 
-    const addTo5 = adder(5)
-    addTo5(2)
-    addTo5(5)
+    const size12 = makeTextSizer(12)
+    const size24 = makeTextSizer(24)
+    const size34 = makeTextSizer(34)
 
-    const addTo10 = adder(10)
-    addTo5(2)
-    addTo5(5)
+    btn.addEventListener("click", size12)
+
 </script>
 
 <script>
 
-    //Let us see the Practical - 2
+    //Practical usecase - 2
     //  document.getElementById('orange').onclick= function(){
     //     document.body.style.backgroundColor = `orange`
     //  }
