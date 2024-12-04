@@ -78,6 +78,7 @@
     //low value he ki high value he ye batayenge user ko
     const lowOrHi = document.querySelector('.lowOrHi')
 
+    //ek baar user ne sare guess lelie he toh ham use bolenge start over karo
     const StartOver = document.querySelector('.resultParas')
 
     const p = document.createElement('p')
@@ -145,9 +146,9 @@
     function cleanupGuess(guess) {
         //cleaning Up
         userInput.value = ""
-        guessSlot.innerHTML += `${guess}  `
+        guessSlot.innerHTML += `${guess}, `
         numOfGuesses++
-        Remaining.innerHTML = `${10 - numOfGuesses}`
+        Remaining.innerHTML = `${11 - numOfGuesses}`
     }
 
     function displayMessage(message) {
@@ -161,7 +162,7 @@
         userInput.value = ' ' // sabse pehle kia values clean
         userInput.setAttribute('disabled', '')
         p.classList.add('button')
-        p.innerHTML = `<h2 id = "New Game">Start new game</h2>`
+        p.innerHTML = `<h2 id = "newGame">Start new game</h2>`
         StartOver.appendChild(p)
         playGame = false
         newGame()
@@ -174,7 +175,7 @@
             PrevGuess = [] //reset
             numOfGuesses = 1
             guessSlot.innerHTML = ''
-            Remaining.innerHTML += `${11 - numOfGuesses}`
+            Remaining.innerHTML = `${11 - numOfGuesses}`
             userInput.removeAttribute('disabled')
             StartOver.removeChild(p)
 
