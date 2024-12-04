@@ -116,8 +116,7 @@
             PrevGuess.push(guess) //user ke guesses array me store kar rahe
 
             //ho sakta he user ka ye last atempt ho iske baad me nahi karne dena chahta
-            if (numOfGuesses === 11) {
-                cleanupGuess(guess)
+            if (11 - numOfGuesses === 1) {
                 displayMessage(`Game Over , Random number was ${randomNumber}`)
                 endGame()
             }
@@ -163,6 +162,7 @@
         userInput.setAttribute('disabled', '')
         p.classList.add('button')
         p.innerHTML = `<h2 id = "newGame">Start new game</h2>`
+        Remaining.innerHTML = 0
         StartOver.appendChild(p)
         playGame = false
         newGame()
